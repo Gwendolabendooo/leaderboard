@@ -25,7 +25,7 @@ const TFTTable = () => {
     {
       puuid : "4f3AMARaoDcnhE9kmto15W3iPqaQOK87rW6ViLTGan_Xmu3x-BKWDcQW-cVbXgiJr5xV-A4OkT6GWw",
       id: "czHoYNuFcfid9erMlcfUFHUK5M8tGE7VBPGbwNdRG_-HvGE",
-      name: "KC SAKEN PAS",
+      name: "La tourelle",
       nbPartie: 0,
     },
     {
