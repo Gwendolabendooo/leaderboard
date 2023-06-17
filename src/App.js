@@ -96,13 +96,47 @@ const TFTTable = () => {
   };
 
   const compareValues = (a, b) => {
-    if (a[sortColumn] < b[sortColumn]) {
-      return sortOrder === 'asc' ? -1 : 1;
+    const rankOrder = {
+      "diamond i": 1,
+      "diamond ii": 2,
+      "diamant iii": 3,
+      "diamant iv": 4,
+      "platine i": 5,
+      "platine ii": 6,
+      "platine iii": 7,
+      "platine iv": 8,
+      "gold i": 9,
+      "gold ii": 10,
+      "gold iii": 11,
+      "gold iv": 12,
+      "silver i": 13,
+      "silver ii": 14,
+      "silver iii": 15,
+      "silver iv": 16,
+      "bronze i": 17,
+      "bronze ii": 18,
+      "bronze iii": 19,
+      "bronze iv": 20,
+      // Ajoutez d'autres rangs selon l'ordre souhaité
+    };
+
+    if (sortColumn == 'rank') {
+      if (rankOrder[a[sortColumn].toLowerCase()] < rankOrder[b[sortColumn].toLowerCase()]) {
+        return sortOrder === 'asc' ? -1 : 1;
+      }
+      if (rankOrder[a[sortColumn].toLowerCase()] > rankOrder[b[sortColumn].toLowerCase()]) {
+        return sortOrder === 'asc' ? 1 : -1;
+      }
+      return 0;
+    } else {
+      if (a[sortColumn] < b[sortColumn]) {
+        return sortOrder === 'asc' ? -1 : 1;
+      }
+      if (a[sortColumn] > b[sortColumn]) {
+        return sortOrder === 'asc' ? 1 : -1;
+      }
+      return 0;
     }
-    if (a[sortColumn] > b[sortColumn]) {
-      return sortOrder === 'asc' ? 1 : -1;
-    }
-    return 0;
   };
 
   useEffect(() => {
