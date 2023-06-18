@@ -63,7 +63,7 @@ const TFTTable = () => {
       for (let i = 0; i < newUsers.length; i++) {
         const user = newUsers[i];
         let avg = 0;
-        const ranking = await axios.get('https://euw1.api.riotgames.com/tft/league/v1/entries/by-summoner/'+user.id+'?api_key=RGAPI-d02f5ccf-e84c-46fc-a824-41a817f032f2&&startTime=1686747358');
+        const ranking = await axios.get('https://euw1.api.riotgames.com/tft/league/v1/entries/by-summoner/'+user.id+'?api_key=RGAPI-da089599-2c3e-4784-8dd6-f29ea85b0b0f');
         
         if (ranking.data[0]) {
           const data = ranking.data[0];
