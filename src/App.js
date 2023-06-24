@@ -72,6 +72,7 @@ const TFTTable = () => {
           user.win = data.wins;
           user.rank = ranking.data[0].tier + ' ' + ranking.data[0].rank;
           user.loose = data.losses;
+          user.leaguePoints = data.leaguePoints;
         }
       }
   
@@ -180,7 +181,7 @@ const TFTTable = () => {
           {filteredPlayers.map((player) => (
             <tr key={player.id}>
               <td style={{textAlign: 'left'}}>{player.name}</td>
-              <td>{player.rank}</td>
+              <td>{player.rank} ({player.leaguePoints})</td>
               <td>{player.nbPartie}</td>
               <td>{player.win}</td>
               <td>{player.loose}</td>
