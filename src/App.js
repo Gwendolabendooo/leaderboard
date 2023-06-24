@@ -31,7 +31,7 @@ const TFTTable = () => {
     {
       puuid : "J7IKp6cny54OaCzqr8-MUZPbKzESVxRkwzbJuSmd6sRAB-4tyn3EB4Owe6Tw-zCBspRX6rfP5jYj9w",
       id: "FkOzsY7PipdNlNha7hh8GRLMEpmGif2cDVHwqWV2KrUP4z-u",
-      name: "AsmarLeGold4",
+      name: "AsmarLeGold2",
       nbPartie: 0,
     },
     {
@@ -63,7 +63,7 @@ const TFTTable = () => {
       for (let i = 0; i < newUsers.length; i++) {
         const user = newUsers[i];
         let avg = 0;
-        const ranking = await axios.get('https://euw1.api.riotgames.com/tft/league/v1/entries/by-summoner/'+user.id+'?api_key=RGAPI-32c7e018-f3b1-4fa1-bc95-0d434f3ef81c');
+        const ranking = await axios.get('https://euw1.api.riotgames.com/tft/league/v1/entries/by-summoner/'+user.id+'?api_key=RGAPI-dcc428da-4de8-41b3-8391-69fd78b74846');
         
         if (ranking.data[0]) {
           const data = ranking.data[0];
